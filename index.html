@@ -48,7 +48,7 @@
     <div class="govuk-grid-column-one-half">
 
         <h2 class="govuk-heading-m">Meeting Length
-        <span class="govuk-caption-l">00:00:00</span></h2>
+        <span class="govuk-caption-l" id="meetingTime">00:00:00</span></h2>
  
 
     </div>
@@ -56,7 +56,7 @@
     <div class="govuk-grid-column-one-half">
 
         <h2 class="govuk-heading-m">Meeting Cost
-        <span class="govuk-caption-l">£0.00</span>
+        <span class="govuk-caption-l" id="meetingCost">£0.00</span>
 
 
     </div>
@@ -70,11 +70,11 @@
     <h2 class="govuk-heading-m">Controls</h2>
 
     <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
+        <button class="govuk-button" data-module="govuk-button" id="startButton">
           Start
         </button>
 
-        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button" id="stopButton">
             Stop
         </button>
       
@@ -82,28 +82,24 @@
           Reset
         </button>
         
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" id="plusButton">
             + 15 min
           </button>
 
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" id="minusButton">
             - 15 min
           </button>
 
       </div>
 
-    <div class="govuk-form-group govuk-button-group">
-        <label class="govuk-label" for="width-10">
-            Name
-          </label>
-          <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
-        
+    <div class="govuk-form-group govuk-button-group">  
         <label class="govuk-label" for="dept">
           Department: 
         </label>
         <select class="govuk-select" id="dept" name="grade">
 
           <option value="Defra" selected>Defra</option>
+          <option value="Cabinet Office">Cabinet Office</option>
 
         </select>
         <label class="govuk-label" for="grade">
@@ -120,11 +116,9 @@
             <option value="D" >D</option>
             <option value="DG" >DG</option>
             <option value="PS" >PS</option>
-
-
           </select>
     
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" id="addParticipant">
         Add
       </button>
     </div>
@@ -138,7 +132,7 @@
 
     <h2 class="govuk-heading-m">Details</h2>
     
-    <table class="govuk-table">
+    <table class="govuk-table" >
         <caption class="govuk-table__caption govuk-table__caption--m">Details</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
@@ -148,23 +142,9 @@
             <th scope="col" class="govuk-table__header">Meeting Cost</th>
           </tr>
         </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__cell">Defra</th>
-            <td class="govuk-table__cell">G7</td>
-            <td class="govuk-table__cell">£20.00</td>
-            <td class="govuk-table__cell">£12.45</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__cell">Defra</th>
-            <td class="govuk-table__cell">G7</td>
-            <td class="govuk-table__cell">£20.00</td>
-            <td class="govuk-table__cell">£12.45</td>          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__cell">Defra</th>
-            <td class="govuk-table__cell">G7</td>
-            <td class="govuk-table__cell">£20.00</td>
-            <td class="govuk-table__cell">£12.45</td>          </tr>
+        <tbody class="govuk-table__body" id="table">
+          
+
         </tbody>
       </table>
 
@@ -208,3 +188,5 @@
   </footer>
 
 </html>
+
+<script type="text/javascript" src="script.js"></script>
