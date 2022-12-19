@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CS Meeting Cost Calulator</title>
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+
+
+</head>
+<body>
+    <div class="govuk-width-container ">
+        
+        <div class="govuk-phase-banner">
+            <p class="govuk-phase-banner__content">
+              <strong class="govuk-tag govuk-phase-banner__content__tag">
+                Feedback
+              </strong>
+              <span class="govuk-phase-banner__text">
+                This is a new service – your <a class="govuk-link" href="mailto:lw7yw8aol@relay.firefox.com?subject=CS Behaviour Helper - Feedback">feedback</a> will help us to improve it.
+              </span>
+            </p>
+          </div>
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+          
+
+    
+
+
+<div class="govuk-grid-row">
+    
+    <h1 class="govuk-heading-l">
+      Civil Service Meeting Cost Calulator
+
+      
+      <span class="govuk-caption-m">How much does your meeting cost?</span>
+    </h1>
+    
+    <p class="govuk-body"></p>
+
+    
+</div>
+
+<div class="govuk-grid-row"> 
+
+    <div class="govuk-grid-column-one-half">
+
+        <h2 class="govuk-heading-m">Meeting Length
+        <span class="govuk-caption-l">00:00:00</span></h2>
+ 
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+
+        <h2 class="govuk-heading-m">Meeting Cost
+        <span class="govuk-caption-l">£0.00</span>
+
+
+    </div>
+
+
+</div>
+
+
+<div class="govuk-grid-row"> 
+
+    <h2 class="govuk-heading-m">Controls</h2>
+
+    <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Start
+        </button>
+
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Stop
+        </button>
+      
+        <button class="govuk-button govuk-button--secondary govuk-button--warning" data-module="govuk-button">
+          Reset
+        </button>
+        
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            + 15 min
+          </button>
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            - 15 min
+          </button>
+
+      </div>
+
+    <div class="govuk-form-group govuk-button-group">
+        <label class="govuk-label" for="width-10">
+            Name
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+        
+        <label class="govuk-label" for="dept">
+          Department: 
+        </label>
+        <select class="govuk-select" id="dept" name="grade">
+
+          <option value="Defra" selected>Defra</option>
+
+        </select>
+        <label class="govuk-label" for="grade">
+            Grade: 
+          </label>
+          <select class="govuk-select" id="grade" name="grade">
+            <option value="AO">AO</option>
+            <option value="EO" selected>EO</option>
+            <option value="HEO">HEO</option>
+            <option value="SEO">SEO</option>
+            <option value="G7" >G7</option>
+            <option value="G6" >G6</option>
+            <option value="DD" >DD</option>
+            <option value="D" >D</option>
+            <option value="DG" >DG</option>
+            <option value="PS" >PS</option>
+
+
+          </select>
+    
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add
+      </button>
+    </div>
+
+</div>
+
+
+<!-- Behaviours -->
+
+<div class="govuk-grid-row"> 
+
+    <h2 class="govuk-heading-m">Details</h2>
+    
+    <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Details</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Dept</th>
+            <th scope="col" class="govuk-table__header">Grade</th>
+            <th scope="col" class="govuk-table__header">Hourly Cost</th>
+            <th scope="col" class="govuk-table__header">Meeting Cost</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell">Defra</th>
+            <td class="govuk-table__cell">G7</td>
+            <td class="govuk-table__cell">£20.00</td>
+            <td class="govuk-table__cell">£12.45</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell">Defra</th>
+            <td class="govuk-table__cell">G7</td>
+            <td class="govuk-table__cell">£20.00</td>
+            <td class="govuk-table__cell">£12.45</td>          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell">Defra</th>
+            <td class="govuk-table__cell">G7</td>
+            <td class="govuk-table__cell">£20.00</td>
+            <td class="govuk-table__cell">£12.45</td>          </tr>
+        </tbody>
+      </table>
+
+
+</div>
+
+
+
+        </main>
+    </div>
+</body>
+<footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+      <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Social links</h2>
+
+          <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              Built by Samuel Hoskin. Find me on:
+            </li>
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="https://github.com/Samuel-Hoskin/CS-Behaviour-Page">
+                GitHub
+              </a>
+            </li>
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="https://www.linkedin.com/in/samuel-hoskin/">
+                LinkedIn
+              </a>
+            </li>
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="https://twitter.com/Samuel_Hoskin">
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</html>
