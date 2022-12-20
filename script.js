@@ -443,6 +443,146 @@ function msToTime(s) {
       "Hr": 49.4464657,
       "Min": 0.824107762,
       "Sec": 0.013735129
+    },
+    {
+      "Department": "Contractor",
+      "Grade": "£400 Day Rate",
+      "Salary": 104000,
+      "Weekly": 2000,
+      "Daily": 400,
+      "Hr": 54.05405405,
+      "Min": 0.900900901,
+      "Sec": 0.015015015
+    },
+    {
+      "Department": "Contractor",
+      "Grade": "£500 Day Rate",
+      "Salary": 130000,
+      "Weekly": 2500,
+      "Daily": 500,
+      "Hr": 67.56756757,
+      "Min": 1.126126126,
+      "Sec": 0.018768769
+    },
+    {
+      "Department": "Contractor",
+      "Grade": "£600 Day Rate",
+      "Salary": 156000,
+      "Weekly": 3000,
+      "Daily": 600,
+      "Hr": 81.08108108,
+      "Min": 1.351351351,
+      "Sec": 0.022522523
+    },
+    {
+      "Department": "Contractor",
+      "Grade": "£700 Day Rate",
+      "Salary": 182000,
+      "Weekly": 3500,
+      "Daily": 700,
+      "Hr": 94.59459459,
+      "Min": 1.576576577,
+      "Sec": 0.026276276
+    },
+    {
+      "Department": "Contractor",
+      "Grade": "£800 Day Rate",
+      "Salary": 208000,
+      "Weekly": 4000,
+      "Daily": 800,
+      "Hr": 108.1081081,
+      "Min": 1.801801802,
+      "Sec": 0.03003003
+    },
+    {
+      "Department": "Contractor",
+      "Grade": "£900 Day Rate",
+      "Salary": 234000,
+      "Weekly": 4500,
+      "Daily": 900,
+      "Hr": 121.6216216,
+      "Min": 2.027027027,
+      "Sec": 0.033783784
+    },
+    {
+      "Department": "Contractor",
+      "Grade": "£1000 Day Rate",
+      "Salary": 260000,
+      "Weekly": 5000,
+      "Daily": 1000,
+      "Hr": 135.1351351,
+      "Min": 2.252252252,
+      "Sec": 0.037537538
+    },
+    {
+      "Department": "National Medium Salary",
+      "Grade": "18 to 21",
+      "Salary": 18597,
+      "Weekly": 357.6346154,
+      "Daily": 71.52692308,
+      "Hr": 9.665800416,
+      "Min": 0.161096674,
+      "Sec": 0.002684945
+    },
+    {
+      "Department": "National Medium Salary",
+      "Grade": "22 to 29",
+      "Salary": 27492,
+      "Weekly": 528.6923077,
+      "Daily": 105.7384615,
+      "Hr": 14.28898129,
+      "Min": 0.238149688,
+      "Sec": 0.003969161
+    },
+    {
+      "Department": "National Medium Salary",
+      "Grade": "30 to 39",
+      "Salary": 34306,
+      "Weekly": 659.7307692,
+      "Daily": 131.9461538,
+      "Hr": 17.83056133,
+      "Min": 0.297176022,
+      "Sec": 0.004952934
+    },
+    {
+      "Department": "National Medium Salary",
+      "Grade": "40 to 49",
+      "Salary": 36961,
+      "Weekly": 710.7884615,
+      "Daily": 142.1576923,
+      "Hr": 19.21049896,
+      "Min": 0.320174983,
+      "Sec": 0.00533625
+    },
+    {
+      "Department": "National Medium Salary",
+      "Grade": "50 to 59",
+      "Salary": 34809,
+      "Weekly": 669.4038462,
+      "Daily": 133.8807692,
+      "Hr": 18.09199584,
+      "Min": 0.301533264,
+      "Sec": 0.005025554
+    },
+    {
+      "Department": "National Medium Salary",
+      "Grade": "60 and over",
+      "Salary": 30468,
+      "Weekly": 585.9230769,
+      "Daily": 117.1846154,
+      "Hr": 15.83575884,
+      "Min": 0.263929314,
+      "Sec": 0.004398822
+    },
+    {
+      "Department": "National Medium Salary",
+      "Grade": "All Ages",
+      "Salary": 33000,
+      "Weekly": 634.6153846,
+      "Daily": 126.9230769,
+      "Hr": 17.15176715,
+      "Min": 0.285862786,
+      "Sec": 0.00476438
     }
    ]
 
