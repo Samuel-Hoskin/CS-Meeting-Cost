@@ -2,6 +2,7 @@
 
 const startButton = document.getElementById('startButton');
 const stopButton = document.getElementById('stopButton');
+const resetButton = document.getElementById('resetButton');
 
 const plusButton = document.getElementById('plusButton');
 const minusButton = document.getElementById('minusButton');
@@ -15,11 +16,12 @@ let timerState;
 let timeAdj = 0;
 let meetingTime;
 let meetingCost = 0
-
+let storedTime = 0
 //participants
 
 let participants = []
 let secCost = 0
+
 
 const addParticipant = document.getElementById('addParticipant');
 const table = document.getElementById('table');
@@ -83,7 +85,7 @@ startButton.addEventListener('click', () => {
         startTime = Date.now();
         
         interval = setInterval(() => {
-          elapsedTime = Date.now() - startTime + timeAdj;
+          elapsedTime = Date.now() - startTime + timeAdj + storedTime;
           secTime = elapsedTime / 1000
           meetingTime = msToTime(elapsedTime); 
           meetingCost = secCost * secTime ;
@@ -102,6 +104,7 @@ startButton.addEventListener('click', () => {
     stopButton.addEventListener('click', () => {
         if (timerState == 1) {
             // Timer is running, so stop it
+            storedTime = elapsedTime - timeAdj
             clearInterval(interval);
             interval = null;
             timerState = 0;
@@ -113,6 +116,16 @@ startButton.addEventListener('click', () => {
         });
 
 //Restart Timer
+
+resetButton.addEventListener('click', () => {
+    
+    clearInterval(interval);
+    interval = null;
+    timerState == 0
+    
+    elapsedTimeElement.innerHTML = `00:00:00`;
+    meetingCostElement.innerHTML = `£0.00`
+})
 
 //Add 15 mintues to timer
 
