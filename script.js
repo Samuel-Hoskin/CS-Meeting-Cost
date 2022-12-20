@@ -590,17 +590,14 @@ let uniDept = [... new Set(salaryData.map(data => data.Department))];
 
 var deptBox = document.getElementById('dept');
 var option = document.createElement("option");
-
-let i = 0;
-
-while (i < uniDept.length) {
-    console.log(uniDept[i]);
-    option.text = uniDept[i]
-    deptBox.add(option)
-    console.log("added")
-    i++;
-
-}
+while (deptBox.options.length) deptBox.remove(0);
+for (var i = 0; i < uniDept.length; i++) {
+    
+    var option = document.createElement('option');
+    option.value = uniDept[i];
+    option.innerHTML = uniDept[i];
+    deptBox.appendChild(option);
+  }
 
 deptBox.addEventListener('change', () => {
 
