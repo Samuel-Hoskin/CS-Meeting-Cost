@@ -12,3 +12,4 @@
 |BEIS     |FOI Submitted (19/12/2022)        |                        |
 |Defra     |FOI Submitted (19/12/2022)        |                        |
 |DFE     |FOI Submitted (19/12/2022)        |                        |
+|National Medium Salary|https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/ashe1997to2015selectedestimates | 20/12/2022
