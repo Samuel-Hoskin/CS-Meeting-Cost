@@ -27,6 +27,7 @@ const table = document.getElementById('table');
 
 
 addParticipant.addEventListener('click', () => {
+
     var dept = document.getElementById('dept').selectedOptions[0].value;
     var grade = document.getElementById('grade').selectedOptions[0].value;
 
@@ -43,7 +44,7 @@ addParticipant.addEventListener('click', () => {
 
     participants.push(participant);
 
-    console.log(participants); 
+    //console.log(participants); 
     
     secCost = participants.reduce(function(prev, cur) {
         return prev + cur.Second;
@@ -61,9 +62,9 @@ addParticipant.addEventListener('click', () => {
     cell3.innerHTML = "£" + participant.Hourly.toFixed(2);
     cell3.classList.add("govuk-table__cell");
 
-    console.log(participant.Department);
-    console.log(participant.Grade);
-    console.log(`£${participant.Hourly.toFixed(2)}`);
+    //console.log(participant.Department);
+    //console.log(participant.Grade);
+    //console.log(`£${participant.Hourly.toFixed(2)}`);
       
     });
 
@@ -86,10 +87,10 @@ startButton.addEventListener('click', () => {
           secTime = elapsedTime / 1000
           meetingTime = msToTime(elapsedTime); 
           meetingCost = secCost * secTime ;
-          console.log(`Elapsed time: ${elapsedTime} milliseconds`);
-          console.log(`meeting cost ${meetingCost}`)
-          console.log(`Sec time ${secTime}`)
-          console.log(`Sec Cost ${secCost}`)
+          //console.log(`Elapsed time: ${elapsedTime} milliseconds`);
+          //console.log(`meeting cost ${meetingCost}`)
+          //console.log(`Sec time ${secTime}`)
+          //console.log(`Sec Cost ${secCost}`)
           
           
           elapsedTimeElement.innerHTML = `${meetingTime}`;
@@ -146,7 +147,10 @@ function msToTime(s) {
 
 
 
-//meeting Cost
+//DropDowns
+
+
+
 
 // Salary Data (Obtained via EOI, The numbers used are based on Band Min for each grade)
    let salaryData = [
@@ -319,5 +323,140 @@ function msToTime(s) {
       "Hr": 103.950104,
       "Min": 1.732501733,
       "Sec": 0.028875029
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 1",
+      "Salary": 20270,
+      "Weekly": 389.8076923,
+      "Daily": 77.96153846,
+      "Hr": 10.53534304,
+      "Min": 0.175589051,
+      "Sec": 0.002926484
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 2",
+      "Salary": 20270,
+      "Weekly": 389.8076923,
+      "Daily": 77.96153846,
+      "Hr": 10.53534304,
+      "Min": 0.175589051,
+      "Sec": 0.002926484
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 3",
+      "Salary": 21730,
+      "Weekly": 417.8846154,
+      "Daily": 83.57692308,
+      "Hr": 11.29417879,
+      "Min": 0.188236313,
+      "Sec": 0.003137272
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 4",
+      "Salary": 23949,
+      "Weekly": 460.5576923,
+      "Daily": 92.11153846,
+      "Hr": 12.4475052,
+      "Min": 0.20745842,
+      "Sec": 0.00345764
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 5",
+      "Salary": 27055,
+      "Weekly": 520.2884615,
+      "Daily": 104.0576923,
+      "Hr": 14.06185031,
+      "Min": 0.234364172,
+      "Sec": 0.00390607
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 6",
+      "Salary": 33706,
+      "Weekly": 648.1923077,
+      "Daily": 129.6384615,
+      "Hr": 17.51871102,
+      "Min": 0.291978517,
+      "Sec": 0.004866309
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 7",
+      "Salary": 41659,
+      "Weekly": 801.1346154,
+      "Daily": 160.2269231,
+      "Hr": 21.6522869,
+      "Min": 0.360871448,
+      "Sec": 0.006014524
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 8a",
+      "Salary": 48526,
+      "Weekly": 933.1923077,
+      "Daily": 186.6384615,
+      "Hr": 25.22141372,
+      "Min": 0.420356895,
+      "Sec": 0.007005948
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 8b",
+      "Salary": 56164,
+      "Weekly": 1080.076923,
+      "Daily": 216.0153846,
+      "Hr": 29.19126819,
+      "Min": 0.486521137,
+      "Sec": 0.008108686
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 8c",
+      "Salary": 67064,
+      "Weekly": 1289.692308,
+      "Daily": 257.9384615,
+      "Hr": 34.85654886,
+      "Min": 0.580942481,
+      "Sec": 0.009682375
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 8d",
+      "Salary": 79592,
+      "Weekly": 1530.615385,
+      "Daily": 306.1230769,
+      "Hr": 41.36798337,
+      "Min": 0.689466389,
+      "Sec": 0.011491106
+    },
+    {
+      "Department": "NHS",
+      "Grade": "Band 9",
+      "Salary": 95135,
+      "Weekly": 1829.519231,
+      "Daily": 365.9038462,
+      "Hr": 49.4464657,
+      "Min": 0.824107762,
+      "Sec": 0.013735129
     }
-  ]
+   ]
+
+let uniDept = [... new Set(salaryData.map(data => data.Department))];
+
+
+
+function isSelcetedDepartment(salaryData) {
+    var dept = document.getElementById('dept').selectedOptions[0].value;
+    return salaryData.Department == dept;
+  }
+
+const filtered = salaryData.filter(isSelcetedDepartment);
+
+
+uniGrade = [... new Set(filtered.map(data => data.Grade ))];
+  // dept 
