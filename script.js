@@ -448,15 +448,50 @@ function msToTime(s) {
 
 let uniDept = [... new Set(salaryData.map(data => data.Department))];
 
+var deptBox = document.getElementById('dept');
+var option = document.createElement("option");
+
+let i = 0;
+
+while (i < uniDept.length) {
+    console.log(uniDept[i]);
+    option.text = uniDept[i]
+    deptBox.add(option)
+    console.log("added")
+    i++;
+
+}
+
+deptBox.addEventListener('change', () => {
+
+    function isSelcetedDepartment(salaryData) {
+        var dept = document.getElementById('dept').selectedOptions[0].value;
+        return salaryData.Department == dept;
+      }
+    
+    var filtered = salaryData.filter(isSelcetedDepartment);
+    
+    uniGrade = [... new Set(filtered.map(data => data.Grade ))];
+
+    var gradeBox = document.getElementById('grade');
+    var option = document.createElement("option");
 
 
-function isSelcetedDepartment(salaryData) {
-    var dept = document.getElementById('dept').selectedOptions[0].value;
-    return salaryData.Department == dept;
-  }
-
-const filtered = salaryData.filter(isSelcetedDepartment);
+while (gradeBox.options.length) gradeBox.remove(0);
 
 
-uniGrade = [... new Set(filtered.map(data => data.Grade ))];
+for (var i = 0; i < uniGrade.length; i++) {
+  var option = document.createElement('option');
+  option.value = uniGrade[i];
+  option.innerHTML = uniGrade[i];
+  gradeBox.appendChild(option);
+}
+
+
+})
+
+
+
+
+
   // dept 

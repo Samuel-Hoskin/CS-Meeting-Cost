@@ -96,8 +96,6 @@
           Department: 
         </label>
         <select class="govuk-select" id="dept" name="dept">
-
-          <option value="Defra" selected>Defra</option>
           <option value="Cabinet Office">Cabinet Office</option>
 
         </select>
@@ -106,15 +104,22 @@
           </label>
           <select class="govuk-select" id="grade" name="grade">
             <option value="AO">AO</option>
-            <option value="EO" selected>EO</option>
+            <option value="EO">EO</option>
+            <option value="AO (L)">AO (L)</option>
+            <option value="Fast Stream">Fast Stream</option>
+            <option value="EO (L)">EO (L)</option>
             <option value="HEO">HEO</option>
+            <option value="HEO (L)">HEO (L)</option>
             <option value="SEO">SEO</option>
-            <option value="G7" >G7</option>
-            <option value="G6" >G6</option>
-            <option value="DD" >DD</option>
-            <option value="D" >D</option>
-            <option value="DG" >DG</option>
-            <option value="PS" >PS</option>
+            <option value="SEO (L)">SEO (L)</option>
+            <option value="G7">G7</option>
+            <option value="G7 (L)">G7 (L)</option>
+            <option value="G6">G6</option>
+            <option value="G6 (L)">G6 (L)</option>
+            <option value="DD">DD</option>
+            <option value="D">D</option>
+            <option value="DG">DG</option>
+            <option value="Perm Sec">Perm Sec</option>
           </select>
     
       <button class="govuk-button govuk-button--secondary" data-module="govuk-button" id="addParticipant">
@@ -138,7 +143,6 @@
             <th scope="col" class="govuk-table__header">Dept</th>
             <th scope="col" class="govuk-table__header">Grade</th>
             <th scope="col" class="govuk-table__header">Hourly Cost</th>
-            <th scope="col" class="govuk-table__header">Meeting Cost</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body" id="table">
