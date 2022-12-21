@@ -3,6 +3,8 @@
 const startButton = document.getElementById('startButton');
 const stopButton = document.getElementById('stopButton');
 const resetButton = document.getElementById('resetButton');
+const resetParticipants = document.getElementById('resetParticipants');
+
 
 const plusButton = document.getElementById('plusButton');
 const minusButton = document.getElementById('minusButton');
@@ -126,6 +128,19 @@ resetButton.addEventListener('click', () => {
     elapsedTimeElement.innerHTML = `00:00:00`;
     meetingCostElement.innerHTML = `£0.00`
 })
+
+
+//reset resetParticipants
+
+resetParticipants.addEventListener('click', () => {
+  participants = [];
+  secCost = 0;
+  while (table.length) table.remove(0);
+  
+  table.innerHTML = "";
+
+})
+
 
 //Add 15 mintues to timer
 
