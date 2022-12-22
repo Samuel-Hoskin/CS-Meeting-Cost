@@ -157,6 +157,9 @@ plusButton.addEventListener('click', () => {
 minusButton.addEventListener('click', () => {
     minusTime = -900000
     timeAdj = timeAdj + minusTime
+    if (timeAdj < 0) {
+      timeAdj = 0
+    };
     console.log("Time Sub trackted ")
 });
 
