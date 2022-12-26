@@ -123,7 +123,8 @@ resetButton.addEventListener('click', () => {
     
     clearInterval(interval);
     interval = null;
-    timerState == 0
+    timerState = 0;
+    timeAdj = 0;
     
     elapsedTimeElement.innerHTML = `00:00:00`;
     meetingCostElement.innerHTML = `£0.00`
@@ -147,7 +148,6 @@ resetParticipants.addEventListener('click', () => {
 plusButton.addEventListener('click', () => {
         plusTime = 900000
         timeAdj = timeAdj + plusTime
-        console.log("Time Added")
     });
 
 //var subtract
@@ -160,7 +160,6 @@ minusButton.addEventListener('click', () => {
     if (timeAdj < 0) {
       timeAdj = 0
     };
-    console.log("Time Sub trackted ")
 });
 
 //ms to HHMMSS and Display
@@ -172,6 +171,18 @@ function msToTime(s) {
   s = (s - secs) / 60;
   var mins = s % 60;
   var hrs = (s - mins) / 60;
+
+  if (secs < 10) {
+    secs = '0'+secs
+  }
+
+  if (mins < 10) {
+    mins = '0'+mins
+  }
+
+  if (hrs < 10) {
+    hrs = '0'+hrs
+  }
 
   return hrs + ':' + mins + ':' + secs;
 }
