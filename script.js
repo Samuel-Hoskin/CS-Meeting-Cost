@@ -91,12 +91,7 @@ startButton.addEventListener('click', () => {
           secTime = elapsedTime / 1000
           meetingTime = msToTime(elapsedTime); 
           meetingCost = secCost * secTime ;
-          //console.log(`Elapsed time: ${elapsedTime} milliseconds`);
-          //console.log(`meeting cost ${meetingCost}`)
-          //console.log(`Sec time ${secTime}`)
-          //console.log(`Sec Cost ${secCost}`)
-          
-          
+
           elapsedTimeElement.innerHTML = `${meetingTime}`;
           meetingCostElement.innerHTML = `£${meetingCost.toFixed(2)}`;
         }, 500);
@@ -125,6 +120,8 @@ resetButton.addEventListener('click', () => {
     interval = null;
     timerState = 0;
     timeAdj = 0;
+    storedTime = 0
+
     
     elapsedTimeElement.innerHTML = `00:00:00`;
     meetingCostElement.innerHTML = `£0.00`
