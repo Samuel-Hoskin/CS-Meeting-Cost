@@ -14,7 +14,7 @@ const meetingCostElement = document.getElementById('meetingCost')
 
 let startTime;
 let elapsedTime = 0;
-let timerState;
+let timerState = 0;
 let timeAdj = 0;
 let meetingTime;
 let meetingCost = 0
@@ -66,6 +66,16 @@ addParticipant.addEventListener('click', () => {
     cell3.innerHTML = "£" + participant.Hourly.toFixed(2);
     cell3.classList.add("govuk-table__cell");
 
+    if (timerState == 0) {
+      elapsedTime = timeAdj + storedTime;
+      secTime = elapsedTime / 1000
+      meetingTime = msToTime(elapsedTime); 
+      meetingCost = secCost * secTime ;
+
+      elapsedTimeElement.innerHTML = `${meetingTime}`;
+      meetingCostElement.innerHTML = `£${meetingCost.toFixed(2)}`;
+    }
+
     //console.log(participant.Department);
     //console.log(participant.Grade);
     //console.log(`£${participant.Hourly.toFixed(2)}`);
@@ -77,6 +87,7 @@ addParticipant.addEventListener('click', () => {
 
 
 // Start Timer
+
 startButton.addEventListener('click', () => {
     if (timerState == 1) {
         // Timer is running, so do nothing
@@ -133,6 +144,8 @@ resetButton.addEventListener('click', () => {
 resetParticipants.addEventListener('click', () => {
   participants = [];
   secCost = 0;
+  meetingCostElement.innerHTML = `£0.00`
+
   while (table.length) table.remove(0);
   
   table.innerHTML = "";
@@ -145,6 +158,16 @@ resetParticipants.addEventListener('click', () => {
 plusButton.addEventListener('click', () => {
         plusTime = 900000
         timeAdj = timeAdj + plusTime
+
+      if (timerState == 0) {
+        elapsedTime = timeAdj + storedTime;
+        secTime = elapsedTime / 1000
+        meetingTime = msToTime(elapsedTime); 
+        meetingCost = secCost * secTime ;
+
+        elapsedTimeElement.innerHTML = `${meetingTime}`;
+        meetingCostElement.innerHTML = `£${meetingCost.toFixed(2)}`;
+      }
     });
 
 //var subtract
@@ -157,6 +180,15 @@ minusButton.addEventListener('click', () => {
     if (timeAdj < 0) {
       timeAdj = 0
     };
+    if (timerState == 0) {
+      elapsedTime = timeAdj + storedTime;
+      secTime = elapsedTime / 1000
+      meetingTime = msToTime(elapsedTime); 
+      meetingCost = secCost * secTime ;
+
+      elapsedTimeElement.innerHTML = `${meetingTime}`;
+      meetingCostElement.innerHTML = `£${meetingCost.toFixed(2)}`;
+  }
 });
 
 //ms to HHMMSS and Display
