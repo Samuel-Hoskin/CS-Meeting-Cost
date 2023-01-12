@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-df = pd.read_excel(r'SalaryData.xlsx')
+df = pd.read_csv(r'SalaryData.csv')
 
 # export data to JSON and JS
 result = df.to_json (orient="records")
