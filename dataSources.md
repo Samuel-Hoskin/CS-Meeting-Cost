@@ -8,7 +8,7 @@
 |DWP     |FOI Submitted (19/12/2022)       |                        |
 |Trade     |FOI Submitted (19/12/2022)        |                        |
 |DULUC     |FOI Submitted (19/12/2022)        |                        |
-|FCDO     |FOI Submitted (19/12/2022)        |                        |
+|FCDO     |FOI2022/32043      |11/01/2023                        |
 |BEIS     |FOI Submitted (19/12/2022)        |                        |
 |Defra     |FOI Submitted (19/12/2022)        |                        |
 |DFE     |FOI Submitted (19/12/2022)        |                        |
