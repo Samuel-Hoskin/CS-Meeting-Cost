@@ -1,12 +1,23 @@
-name: Push generated webpage to another repository
-uses: nkoppel/push-files-to-another-repository@1.1.0
+
+name: Push File
+
 on: push
 
-env:
-      API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-with:
-      source-files: '/'
-      destination-username: 'Samuel-Hoskin'
-      destination-repository: 'CS-Tools'
-      destination-directory: 'CS-Tools/MeetingCost'
-      commit-email: 'nathankoppel0@gmail.com'
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: '/'
+        destination_repo: 'Samuel-Hoskin/CS-Tools'
+        destination_folder: 'MeetingCost'
+        user_email: 'example@email.com'
+        user_name: 'Samuel-Hoskin'
+        commit_message: 'A custom message for the commit'
