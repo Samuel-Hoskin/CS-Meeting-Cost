@@ -1,5 +1,10 @@
 name: Push generated webpage to another repository
 uses: nkoppel/push-files-to-another-repository@1.1.0
+on:
+      push:
+      branches:
+            - main
+
 env:
       API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
 with:
