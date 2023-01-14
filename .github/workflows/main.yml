@@ -18,6 +18,7 @@ jobs:
         source_file: '/'
         destination_repo: 'Samuel-Hoskin/CS-Tools'
         destination_folder: 'MeetingCost'
+        destination_branch: 'Master'
         user_email: 'example@email.com'
         user_name: 'Samuel-Hoskin'
         commit_message: 'A custom message for the commit'
