@@ -23,5 +23,5 @@ jobs:
           destination-github-username: 'Samuel_Hoskin'
           destination-repository-name: 'CS-Tools'
           target-branch: main
-          target-directory: /MeetingCost
+          target-directory: MeetingCost/
   
