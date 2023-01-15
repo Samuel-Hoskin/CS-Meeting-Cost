@@ -13,15 +13,15 @@ jobs:
                                # using "pandoc/latex" because of dependencies
                                # used in the specific "build.sh"
     steps:
-      - uses: actions/checkout@v2
-      - name: creates output
-        uses: cpina/github-action-push-to-another-repository@main
+    
+      - name: Push generated webpage to another repository
+        uses: nkoppel/push-files-to-another-repository@1.1.0
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: .
-          destination-github-username: 'Samuel_Hoskin'
-          destination-repository-name: 'CS-Tools'
-          target-branch: main
-          target-directory: MeetingCost/
-          github-server: https://github.com
+          source-files: '/'
+          destination-username: 'Samuel_Hoskin'
+          destination-repository: 'CS-Tools'
+          destination-directory: 'MeetingCost'
+          commit-email: 'nathankoppel0@gmail.com'
+  
