@@ -19,9 +19,9 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: '.'
+          source-directory: .
           destination-github-username: 'Samuel_Hoskin'
           destination-repository-name: 'CS-Tools'
           target-branch: main
-          target-directory: MeetingCost
+          target-directory: /MeetingCost
   
