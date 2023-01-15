@@ -22,7 +22,6 @@ jobs:
           source-directory: '.'
           destination-github-username: 'Samuel_Hoskin'
           destination-repository-name: 'CS-Tools'
-          user-email: carles3@pina.cat
-          target-branch: master
+          target-branch: main
           target-directory: MeetingCost
   
