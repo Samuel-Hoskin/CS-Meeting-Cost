@@ -1,4 +1,4 @@
-name: CI
+name: Copy Repo
 
 on:
   push:
@@ -24,4 +24,4 @@ jobs:
           destination-repository-name: 'CS-Tools'
           target-branch: main
           target-directory: MeetingCost/
-  
+          github-server: https://github.com
