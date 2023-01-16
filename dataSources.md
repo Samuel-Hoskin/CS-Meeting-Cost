@@ -9,7 +9,7 @@
 |Trade     |FOI Submitted (19/12/2022)        |                        |
 |DULUC     |FOI Submitted (19/12/2022)        |                        |
 |FCDO     |FOI2022/32043      |11/01/2023                        |
-|BEIS     |FOI Submitted (19/12/2022)        |                        |
+|BEIS     |FOI2022/32337      |16/01/2023                        |
 |Defra     |FOI Submitted (19/12/2022)        |                        |
 |DFE     |FOI Submitted (19/12/2022)        |                        |
 |National Medium Salary|https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/ashe1997to2015selectedestimates | 20/12/2022
