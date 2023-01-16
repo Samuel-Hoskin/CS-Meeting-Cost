@@ -1,0 +1,27 @@
+name: Copy Repo
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: pandoc/latex    # "ubuntu" is a more generic container
+                               # using "pandoc/latex" because of dependencies
+                               # used in the specific "build.sh"
+    steps:
+    
+      - name: Push generated webpage to another repository
+        uses: nkoppel/push-files-to-another-repository@1.1.1
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-files: '/'
+          destination-username: 'Samuel_Hoskin'
+          destination-repository: 'CS-Tools'
+          destination-directory: 'MeetingCost'
+          commit-email: 'nathankoppel0@gmail.com'
+  
