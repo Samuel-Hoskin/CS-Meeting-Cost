@@ -13,3 +13,5 @@
 |Defra     |FOI Submitted (19/12/2022)        |                        |
 |DFE     | FOI 2022-0049172  |19/01/2023                        |
 |National Medium Salary|https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/ashe1997to2015selectedestimates | 20/12/2022
+|HMT|https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/583819/FOI2016-26337_grade_salary_bands.pdf|21/01/2023|
+|DHSC|https://www.data.gov.uk/dataset/04427362-663e-49e0-9103-8bc01dcaa2c7/organogram-of-staff-roles-and-salaries|21/01/2023
